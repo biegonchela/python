@@ -1,0 +1,25 @@
+name=input("Enter name of customer: ")
+address=input("Enter address: ")
+tel_number=int(input("Enter tel_number: "))
+previousMeter_reading=float(input("Enter previousMeter_reading: "))
+currentMeter_reading=float(input("Enter currentMeter_reading: "))
+number_of_units=(currentMeter_reading-previousMeter_reading)
+
+if number_of_units <=100:
+    bill_to_pay=number_of_units*2.50;
+elif number_of_units >100 and number_of_units <= 200:
+    bill_to_pay=number_of_units*2.25;
+elif number_of_units >200 and number_of_units <= 350:
+    bill_to_pay=number_of_units*1.90;
+else :
+     bill_to_pay=number_of_units*1.65;
+
+print(f"name:{name}")
+print(f"address:{address}")
+print(f"tel_number:{tel_number}")
+print(f"previousMeter_reading:{previousMeter_reading}")
+print(f"currentMeter_reading:{currentMeter_reading}")
+print(f"number_of_units:{number_of_units}") #consumption   
+print(f"Ksh:{bill_to_pay}")
+print(f"Your water bill is Ksh:{bill_to_pay}")
+    
