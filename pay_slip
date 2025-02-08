@@ -1,0 +1,20 @@
+no_of_employees=1
+while no_of_employees<=10:
+    no_of_hours=float(input("Enter the hours worked; "))
+    hourly_rate=1500
+    lunch_allowance=200
+    basic_salary=no_of_hours*hourly_rate
+    gross_salary=basic_salary+lunch_allowance
+    if gross_salary<2000:
+        tax=0*gross_salary/100
+    elif gross_salary>=2001 and gross_salary<=3000:
+        tax=5*gross_salary/100
+    elif gross_salary>=3001 and gross_salary<=4000:
+        tax=7*gross_salary/100
+    elif gross_salary>=4001 and gross_salary<=5000:
+        tax=9*gross_salary/100
+    else:
+        tax=11*gross_salary/100
+    net_pay=gross_salary-tax
+    print(f"Kshs{net_pay}")
+    no_of_employees+=1
